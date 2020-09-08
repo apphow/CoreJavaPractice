@@ -50,13 +50,13 @@ public class IfBlocks {
 
         if (playerScore >= 1000) {
             return 1;
-        } else if (playerScore >= 900 && playerScore < 1000) {
+        } else if (playerScore >= 900) {
             return 2;
-        } else if (playerScore >= 800 && playerScore < 900) {
+        } else if (playerScore >= 800) {
             return 3;
-        } else if (playerScore >= 700 && playerScore < 800) {
+        } else if (playerScore >= 700) {
             return 4;
-        } else if (playerScore >= 600 && playerScore < 700) {
+        } else if (playerScore >= 600) {
             return 5;
         } else {
             return 6;
