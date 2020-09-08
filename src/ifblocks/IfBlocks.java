@@ -4,9 +4,63 @@ public class IfBlocks {
 
     public static void main(String[] args) {
 
-        calculateScore(true, 800, 5, 100);
+        boolean gameOver = true;
+        int score = 800;
+        int levelCompleted = 5;
+        int bonus = 100;
 
-        calculateScore(true, 10000, 8, 200);
+        calculateScore(gameOver, score, levelCompleted, bonus);
+
+        int highScore = calculateScore(gameOver, score, levelCompleted, bonus);
+        System.out.println("Your final score is : " + highScore);
+
+        score = 10000;
+        levelCompleted = 8;
+        bonus = 200;
+
+        highScore = calculateScore(gameOver, score, levelCompleted, bonus);
+        System.out.println("Your final score is : " + highScore);
+
+        int highScorePosition = calculateHighScore(1000);
+        displayHighScorePosition("Chelsea", highScorePosition);
+
+        highScorePosition = calculateHighScore(950);
+        displayHighScorePosition("Greg", highScorePosition);
+
+        highScorePosition = calculateHighScore(890);
+        displayHighScorePosition("Cameron", highScorePosition);
+
+        highScorePosition = calculateHighScore(750);
+        displayHighScorePosition("Parker", highScorePosition);
+
+         highScorePosition = calculateHighScore(600);
+        displayHighScorePosition("April", highScorePosition);
+
+        highScorePosition = calculateHighScore(500);
+        displayHighScorePosition("Brittany", highScorePosition);
+
+    }
+
+    public static void displayHighScorePosition(String name, int position) {
+
+        System.out.println(name + " is in position " + position + " on the scoreboard");
+    }
+
+    public static int calculateHighScore(int playerScore) {
+
+        if (playerScore >= 1000) {
+            return 1;
+        } else if (playerScore >= 900 && playerScore < 1000) {
+            return 2;
+        } else if (playerScore >= 800 && playerScore < 900) {
+            return 3;
+        } else if (playerScore >= 700 && playerScore < 800) {
+            return 4;
+        } else if (playerScore >= 600 && playerScore < 700) {
+            return 5;
+        } else {
+            return 6;
+        }
     }
 
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
@@ -15,7 +69,6 @@ public class IfBlocks {
 
             int finalScore = score + (levelCompleted * bonus);
             finalScore += 2000;
-            System.out.println("Your final score is : " + finalScore);
             return finalScore;
         }
         System.out.println("Game Over");
