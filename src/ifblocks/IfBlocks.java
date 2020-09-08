@@ -50,6 +50,8 @@ public class IfBlocks {
 
         if (playerScore >= 1000) {
             return 1;
+            // if we get past first condition, less than 1000 is already true so
+            // we don't need (playerScore>= 900 && playerScore < 1000)
         } else if (playerScore >= 900) {
             return 2;
         } else if (playerScore >= 800) {
@@ -58,9 +60,8 @@ public class IfBlocks {
             return 4;
         } else if (playerScore >= 600) {
             return 5;
-        } else {
-            return 6;
         }
+            return 6;
     }
 
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
