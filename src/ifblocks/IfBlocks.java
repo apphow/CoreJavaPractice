@@ -78,8 +78,6 @@ public class IfBlocks {
             position = 4;
         } else if (playerScore >= 600) {
             position = 5;
-        } else {
-            position = 6;
         }
         return position;
     }
