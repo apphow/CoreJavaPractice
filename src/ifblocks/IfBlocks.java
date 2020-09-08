@@ -48,6 +48,7 @@ public class IfBlocks {
 
     public static int calculateHighScore(int playerScore) {
 
+        /*
         if (playerScore >= 1000) {
             return 1;
             // if we get past first condition, less than 1000 is already true so
@@ -63,7 +64,25 @@ public class IfBlocks {
         }
             return 6;
     }
+         */
 
+        int position = 6;
+
+        if (playerScore >= 1000) {
+            position = 1;
+        } else if (playerScore >= 900) {
+            position = 2;
+        } else if (playerScore >= 800) {
+            position = 3;
+        } else if (playerScore >= 700) {
+            position = 4;
+        } else if (playerScore >= 600) {
+            position = 5;
+        } else {
+            position = 6;
+        }
+        return position;
+    }
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
 
         if (gameOver) {
