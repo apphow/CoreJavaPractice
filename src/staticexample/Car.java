@@ -5,7 +5,7 @@ public class Car {
         public static int currentSpeed = 0;
         public static int maxSpeed = 180;
 
-        public static void showCurrentSpeed(int speed) {
+    public static void showCurrentSpeed(int speed) {
             System.out.println("Your current speed is : " + speed);
         }
 
