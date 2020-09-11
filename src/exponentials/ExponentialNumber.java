@@ -17,9 +17,6 @@ public class ExponentialNumber {
             System.out.println(base + " to the power of " + i + " is " + pow(base, i));
         }
         input.close();
-
-
-
     }
 
     public static int pow(int num, int power) {
